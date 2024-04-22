@@ -8,7 +8,7 @@ const blogRoutes = require('./routes/blogRoutes');  // Ensure this module is imp
 const app = express();
 
 // Connect to MongoDB
-const dbURI = "your_mongodb_connection_string_here";  // Ensure this is properly configured
+const dbURI = "mongodb+srv://user1:g0D9oCoCVvTYtqzo@cluster0.azmfvjo.mongodb.net/";  // Ensure this is properly configured
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(res => {
     app.listen(3000, function() {
