@@ -7,10 +7,9 @@ const blogRoutes = require('./routes/blogRoutes');
 const app = express();
 
 // connect to mongodb & listen for requests
-const dbURI = "mongodb+srv://admin-kapil:Kapil2408@cluster0.msrwt.mongodb.net/blog-ninjaDB";
-
+const dbURI = "mongodb+srv://user1:g0D9oCoCVvTYtqzo@cluster0.azmfvjo.mongodb.net/";
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(process.env.PORT || 3000))
+  .then(result => app.listen(3000))
   .catch(err => console.log(err));
 
 // register view engine
@@ -24,7 +23,14 @@ app.use((req, res, next) => {
   res.locals.path = req.path;
   next();
 });
-
+app.get("/", function (req, res) {
+  const blogs = [
+    { title: "Yoshi finds eggs", snippet: "Lorem ipsum dolor sit amet consectetur" },
+    { title: "Mario finds stars", snippet: "Lorem ipsum dolor sit amet consectetur" },
+    { title: "How to defeat bowser", snippet: "Lorem ipsum dolor sit amet consectetur" },
+  ];
+  res.render("index", { title: "Home", blogs });
+});
 // routes
 app.get('/', (req, res) => {
   res.redirect('/blogs');

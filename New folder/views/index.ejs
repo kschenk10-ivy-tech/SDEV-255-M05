@@ -1,12 +1,11 @@
 <html lang="en">
+<div class="site-title">
+<a href="/"><h1>Blog Ninja</h1></a>
+<p>A Net Ninja site-title</p>
 <%- include("./partials/head.ejs") %>
-
-<body>
   <%- include("./partials/nav.ejs") %>
-
   <div class="blogs content">
     <h2>All Blogs</h2>
-
     <% if (blogs.length > 0) { %>
       <% blogs.forEach(blog => { %>
         <a class="single" href="/blogs/<%= blog._id %>">
@@ -17,7 +16,7 @@
     <% } else { %>
       <p>There are no blogs to display...</p>
     <% } %>
-    
+  </div>
   </div>
 
   <%- include("./partials/footer.ejs") %>
