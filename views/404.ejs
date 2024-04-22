@@ -1,11 +1,13 @@
 <html lang="en">
-  <%- include('./partials/header.ejs')%>
-  <body>
-    <%- include("./partials/nav.ejs") %>
-    <h1>404 - OOPS!</h1>
-    <h2>That page does not exist</h2>
-    <a href="/" style="color: blue; text-decoration: underline">Kembali ke halaman utama</a>
+<%- include("./partials/head.ejs") %>
 
-    <%- include('./partials/footer.ejs') %>
-  </body>
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="not-found content">
+    OOPS, page not found :)
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
 </html>
