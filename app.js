@@ -23,7 +23,14 @@ app.use((req, res, next) => {
   res.locals.path = req.path;
   next();
 });
-
+app.get("/", function (req, res) {
+  const blogs = [
+    { title: "Yoshi finds eggs", snippet: "Lorem ipsum dolor sit amet consectetur" },
+    { title: "Mario finds stars", snippet: "Lorem ipsum dolor sit amet consectetur" },
+    { title: "How to defeat bowser", snippet: "Lorem ipsum dolor sit amet consectetur" },
+  ];
+  res.render("index", { title: "Home", blogs });
+});
 // routes
 app.get('/', (req, res) => {
   res.redirect('/blogs');
