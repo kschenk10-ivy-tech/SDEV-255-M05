@@ -10,6 +10,7 @@
 		"editor.unicodeHighlight.invisibleCharacters": false,
 		"editor.unicodeHighlight.includeStrings": false,
 		"editor.unicodeHighlight.includeComments": false,
-		"editor.unicodeHighlight.ambiguousCharacters": false
+		"editor.unicodeHighlight.ambiguousCharacters": false,
+		"liveServer.settings.port": 5501
 	}
 }
