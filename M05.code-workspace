@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.unusualLineTerminators": "off",
+		"editor.unicodeHighlight.nonBasicASCII": false,
+		"editor.unicodeHighlight.invisibleCharacters": false,
+		"editor.unicodeHighlight.includeStrings": false,
+		"editor.unicodeHighlight.includeComments": false,
+		"editor.unicodeHighlight.ambiguousCharacters": false
+	}
+}
