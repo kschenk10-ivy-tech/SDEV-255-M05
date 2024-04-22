@@ -7,9 +7,11 @@ const blog = new Schema({
   tags: [String],
   createdAt: Date,
   updatedAt: Date,
-  comments: [{
-    user: String,
-    content: String,
-    votes: Number
-  }]
+  comments: [
+    {
+      user: String,
+      content: String,
+      votes: Number,
+    },
+  ],
 });
